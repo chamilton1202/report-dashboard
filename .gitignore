@@ -1,5 +1,8 @@
 
 target/
 .attach*
+.classpath
+.project
+.settings/
 
 
