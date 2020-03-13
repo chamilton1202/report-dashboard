@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Outbound Orders</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<h2>List of All Outbound Orders</h2>
+
+	<table border="1">
+		<tr>
+			<th>Order Id</th>
+			<th>Created Date</th>
+			<th>Type</th>
+			<!-- BRANCH/BU -->
+			<th>CPU</th>
+			<th>Status</th>
+		</tr>
+
+		<th:block th:each="outboundOrder : ${outboundOrderList}">
+			<tr>
+				<td th:text="${outboundOrder.orderId}">Order Id</td>
+				<td th:text="${outboundOrder.createdDate}">Created Date</td>
+				<td th:text="${outboundOrder.type}">Type</td>
+				<td th:text="${outboundOrder.cpu}">CPU</td>
+				<td th:text="${outboundOrder.status}">Status</td>
+			</tr>
+		</th:block>
+	</table>
+</body>
+</html>
