@@ -21,4 +21,6 @@ public interface InboundOrderService {
 	// FindByCreatedDate
 	public List<InboundOrder> findInboundOrderByCreatedDate(String createdDate);
 
+	//Custom Native Query
+	public List<InboundOrder> findByFromDateAndToDate(String fromDate, String toDate);
 }

@@ -20,4 +20,7 @@ public interface OutboundOrderService {
 	// Custom Operations
 	// FindByCreatedDate
 	public List<OutboundOrder> findOutboundOrderByCreatedDate(String createdDate);
+	
+	//Custom Native Query
+	public List<OutboundOrder> findByFromDateAndToDate(String fromDate, String toDate);
 }

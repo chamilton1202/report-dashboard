@@ -43,5 +43,11 @@ public class InboundOrderServiceImpl implements InboundOrderService {
 		return inboundOrderRepos.findByCreatedDate(createdDate);
 	}
 
+	@Override
+	public List<InboundOrder> findByFromDateAndToDate(String fromDate, String toDate) {
+		log.info("findByFromDateAndToDate");
+		return inboundOrderRepos.findByFromDateAndToDate(fromDate, toDate);
+	}
+
 	
 }

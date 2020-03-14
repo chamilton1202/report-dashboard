@@ -43,4 +43,10 @@ public class OutboundOrderServiceImpl implements OutboundOrderService {
 		return outboundOrderRepos.findByCreatedDate(createdDate);
 	}
 
+	@Override
+	public List<OutboundOrder> findByFromDateAndToDate(String fromDate, String toDate) {
+		log.info("findByFromDateAndToDate");
+		return outboundOrderRepos.findByFromDateAndToDate(fromDate, toDate);
+	}
+
 }

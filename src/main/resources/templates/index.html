@@ -19,7 +19,7 @@
 		<div class="starter-template">
 		
 			<!-- <h2 align="center">Inbound Order Search</h2> -->
-			<form action="#" th:action="@{/searchInboundOrders}"
+			<form action="#" th:action="@{Inbound/searchInboundOrders}"
 				th:object="${orderSearch}" method="post">
 				
 				<table border="1">
@@ -46,9 +46,9 @@
 				</table>
 				
 			</form>
-					
+			<p>
 			<!-- <h2 align="center">Outbound Order Search</h2> -->
-			<form action="#" th:action="@{/searchOutboundOrders}"
+			<form action="#" th:action="@{Outbound/searchOutboundOrders}"
 				th:object="${orderSearch}" method="post">
 				
 				<table border="1">
@@ -77,14 +77,6 @@
 			</form>
 		</div>
 	</div>
-	<footer>
-			<a href="Inbound/InboundOrders">Show Inbound Orders</a>
-			<a href="Inbound/DownloadInboundOrdersReport">Generate Inbound
-					Orders PDF</a>
-			<a href="Outbound/OutboundOrders">Show Outbound Orders</a>
-			<a href="Outbound/DownloadOutboundOrdersReport">Generate
-					Outbound Orders PDF</a>
-	</footer>
 	<script type="text/javascript"
 		th:src="@{webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
 

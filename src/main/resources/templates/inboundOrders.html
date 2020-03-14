@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<h2>List of All Inbound Orders</h2>
+	<h2>List of Inbound Orders</h2>
 
 	<table border="1">
 		<tr>
@@ -19,7 +19,7 @@
 			<th>CPU</th>
 			<th>Status</th>
 		</tr>
-		<th:block th:each="inboundOrder : ${inboundOrderList}">
+		<th:block th:each="inboundOrder : ${inboundOrdersList}">
 			<tr>
 				<td th:text="${inboundOrder.orderId}">Order Id</td>
 				<td th:text="${inboundOrder.createdDate}">Created Date</td>
@@ -30,5 +30,22 @@
 			</tr>
 		</th:block>
 	</table>
+	<p>
+	<form action="#" th:action="@{DownloadInboundOrdersReport}"
+		th:object="${inboundOrdersList}" method="post">
+
+		<table border="1">
+			<tr>
+				<th>Generate Inbound Orders PDF</th>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Generate Inbound Orders PDF"></td>
+			</tr>
+		</table>
+	</form>
+	<p>
+	<footer>
+			<a href="../">Home</a>
+	</footer>
 </body>
 </html>
