@@ -29,7 +29,7 @@
 		</th:block>
 	</table>
 	<p>
-	<form action="#" th:action="@{DownloadOutboundOrdersReport}"
+	<form action="#" th:action="@{DownloadOutboundOrdersPDFReport}"
 		th:object="${outboundOrdersList}" method="post">
 
 		<table border="1">
@@ -38,6 +38,19 @@
 			</tr>
 			<tr>
 				<td><input type="submit" value="Generate Outbound Orders PDF"></td>
+			</tr>
+		</table>
+	</form>
+	<p>
+	<form action="#" th:action="@{DownloadOutboundOrdersXLSReport}"
+		th:object="${outboundOrdersList}" method="post">
+
+		<table border="1">
+			<tr>
+				<th>Generate Outbound Orders XLS</th>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Generate Outbound Orders XLS"></td>
 			</tr>
 		</table>
 	</form>
